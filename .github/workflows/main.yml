@@ -21,7 +21,6 @@ jobs:
       - name: Set lowercase image name
         id: lowercase
         run: |
-          # Convert both username and repo name separately to lowercase
           USERNAME_LOWER=$(echo "${{ github.actor }}" | tr '[:upper:]' '[:lower:]')
           REPO_NAME_LOWER=$(echo "${{ github.event.repository.name }}" | tr '[:upper:]' '[:lower:]')
           echo "image_name=ghcr.io/$USERNAME_LOWER/$REPO_NAME_LOWER:latest" >> $GITHUB_OUTPUT
@@ -50,5 +49,4 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'todo-production'
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           images: ${{ steps.lowercase.outputs.image_name }}
