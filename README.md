@@ -1,15 +1,7 @@
-# Todo-list-app-production
-Here is the complete, step-by-step `README.md` for your GitHub repository. 
-
-It documents the entire journey from local testing to the final Azure deployment. You can copy and paste this directly into your `README.md` file on GitHub.
-
-***
-
-```markdown
-# Capstone Project: Containerized To-Do App with CI/CD Deployment to Azure
+# Containerized To-Do App with CI/CD Deployment to Azure
 
 ## Project Overview
-This Capstone project demonstrates the end-to-end lifecycle of a web application. It covers local development testing, Docker containerization, automated CI/CD via GitHub Actions, and deployment to Microsoft Azure App Service.
+This project demonstrates the end-to-end lifecycle of a web application. It covers local development testing, Docker containerization, automated CI/CD via GitHub Actions, and deployment to Microsoft Azure App Service.
 
 ## Architecture & Tech Stack
 *   **Application:** Python (Flask) with SQLite database.
@@ -61,23 +53,22 @@ Created a workflow (`.github/workflows/main.yml`) that automates the deployment 
 
 ### 1. Local Application Testing
 *The Flask app running locally in a virtual environment before Dockerization.*
-*[INSERT SCREENSHOT 1 HERE - App running at localhost:8000]*
+![App running at localhost:8000](https://github.com/Walcott-iam/Todo-list-app-production/blob/main/Task61.png)
 
 ### 2. Docker Build Success
 *The terminal output showing the multi-stage Docker image built successfully.*
-*[INSERT SCREENSHOT 2 HERE - Terminal showing docker build complete]*
+![Terminal showing docker build complete](https://github.com/Walcott-iam/Todo-list-app-production/blob/main/task62.png)
 
 ### 3. Local Container Running
 *The Docker container running in the background, serving the app on port 8000.*
-*[INSERT SCREENSHOT 3 HERE - Terminal showing docker ps]*
+*![Terminal showing docker ps](https://github.com/Walcott-iam/Todo-list-app-production/blob/main/Task63.png)
 
-### 4. CI/CD Pipeline Success
-*The GitHub Actions pipeline successfully building the image, pushing to GHCR, and deploying to Azure.*
-*[INSERT SCREENSHOT 4 HERE - GitHub Actions green checkmark]*
+### 4. Azure web App Configuration
+![GitHub Actions green checkmark](https://github.com/Walcott-iam/Todo-list-app-production/blob/main/Task64.png)
 
 ### 5. Live Azure Application
 *The fully deployed To-Do app running live on Azure App Service.*
-*[INSERT SCREENSHOT 5 HERE - Live Azure URL]*
+![Live Azure URL](https://github.com/Walcott-iam/Todo-list-app-production/blob/main/Task65.png)
 
 ---
 
