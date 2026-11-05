@@ -29,7 +29,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/walcott-iam/todo-list-app-production:latest
+          tags: ghcr.io/${{ github.actor }}/{{ github.event.repository.name | lower }}:latest
           provenance: false
       
       - name: Deploy to Azure Web App
@@ -37,4 +37,4 @@ jobs:
         with:
           app-name: 'todo-production'
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          images: 'ghcr.io/walcott-iam/todo-list-app-production:latest'
+          images: 'ghcr.io/${{ github.actor }}/{{ github.event.repository.name | lower }}:latest'
