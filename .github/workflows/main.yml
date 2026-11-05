@@ -30,6 +30,7 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/walcott-iam/todo-list-app-production:latest
+          provenance: false
       
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
